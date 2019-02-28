@@ -36,6 +36,11 @@ class Coupon
      */
     private $payment;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $paydate;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +90,18 @@ class Coupon
     public function setPayment(?float $payment): self
     {
         $this->payment = $payment;
+
+        return $this;
+    }
+
+    public function getPaydate(): ?\DateTimeInterface
+    {
+        return $this->paydate;
+    }
+
+    public function setPaydate(?\DateTimeInterface $paydate): self
+    {
+        $this->paydate = $paydate;
 
         return $this;
     }

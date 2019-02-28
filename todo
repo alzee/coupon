@@ -5,3 +5,7 @@ pages
  coupons
  coupon detail
  #new agent
+
+tables
+ agent id,name,phone,balence,date
+ coupon id,num,agentid,balance,payment,paydate
