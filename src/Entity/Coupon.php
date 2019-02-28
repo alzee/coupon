@@ -22,14 +22,14 @@ class Coupon
     private $num;
 
     /**
-     * @ORM\Column(type="string", length=20)
-     */
-    private $referee;
-
-    /**
      * @ORM\Column(type="float")
      */
     private $balance;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $agentid;
 
     public function getId(): ?int
     {
@@ -68,6 +68,18 @@ class Coupon
     public function setBalance(float $balance): self
     {
         $this->balance = $balance;
+
+        return $this;
+    }
+
+    public function getAgentid(): ?int
+    {
+        return $this->agentid;
+    }
+
+    public function setAgentid(int $agentid): self
+    {
+        $this->agentid = $agentid;
 
         return $this;
     }
