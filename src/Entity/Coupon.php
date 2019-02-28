@@ -48,18 +48,6 @@ class Coupon
         return $this;
     }
 
-    public function getReferee(): ?string
-    {
-        return $this->referee;
-    }
-
-    public function setReferee(string $referee): self
-    {
-        $this->referee = $referee;
-
-        return $this;
-    }
-
     public function getBalance(): ?float
     {
         return $this->balance;
