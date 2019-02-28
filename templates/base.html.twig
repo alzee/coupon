@@ -14,16 +14,22 @@
 			<nav class="navbar navbar-light bg-light mb-3" id="nav">
 				<ul class="nav nav-pills">
 					<li class="nav-item">
-						<a class="nav-link active" href="/">消 费</a>
+						<a class="nav-link {% if controller_name == 'PayController' %} active {% endif %}" href="/">消 费</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="agent">推荐人</a>
+						<a class="nav-link {% if controller_name == 'AgentController' %} active {% endif %}" href="agent">推荐人</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="coupon">现金卡</a>
+						<a class="nav-link {% if controller_name == 'CouponController' %} active {% endif %}" href="coupon">现金卡</a>
 					</li>
 				</ul>	
 			</nav>
+			<!--
+			{{ controller_name | trim('Controller') | lower }}
+			{{ controller_name }}
+			{{ controller_name | trim('Controller', 'right') }}
+			{{ controller_name |  lower }}
+			-->
 			
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
