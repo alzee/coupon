@@ -31,6 +31,11 @@ class Coupon
      */
     private $agentid;
 
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $payment;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +73,18 @@ class Coupon
     public function setAgentid(int $agentid): self
     {
         $this->agentid = $agentid;
+
+        return $this;
+    }
+
+    public function getPayment(): ?float
+    {
+        return $this->payment;
+    }
+
+    public function setPayment(?float $payment): self
+    {
+        $this->payment = $payment;
 
         return $this;
     }
