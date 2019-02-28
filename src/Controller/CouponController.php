@@ -13,11 +13,13 @@ class CouponController extends AbstractController
      */
     public function index()
     {
-		$repo = $this->getDoctrine()->getRepository(Coupon::class);
-		$coupon = $repo->find(1);
+		// $repo = $this->getDoctrine()->getRepository(Coupon::class);
+		// $coupon = $repo->find(1);
+		$coupon = $this->getDoctrine()->getRepository(Coupon::class)->find(1);
+		
         return $this->render('coupon/index.html.twig', [
             'controller_name' => 'CouponController',
-            'repo' => $repo,
+            // 'repo' => $repo,
             'coupon' => $coupon,
         ]);
     }
