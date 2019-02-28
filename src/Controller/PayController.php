@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class PayController extends AbstractController
 {
     /**
-     * @Route("/pay", name="pay")
+     * @Route("/", name="pay")
      */
     public function index()
     {
