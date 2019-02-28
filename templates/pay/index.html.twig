@@ -1,20 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PayController!{% endblock %}
+{% block title %}消 费{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+	<div class="input-group mb-3">
+		<div class="input-group-prepend w-25">
+			<span class="input-group-text w-100" id="">卡号/手机号：</span>
+		</div>
+		<input type="text" class="form-control" placeholder="">
+		<div class="input-group-append w-25">
+			<span class="input-group-text w-50" id="">姓名：</span>
+			<span class="input-group-text w-50" id="">余额：</span>
+		</div>
+	</div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/arc/.dot/web/coupon/src/Controller/PayController.php'|file_link(0) }}">src/Controller/PayController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/arc/.dot/web/coupon/templates/pay/index.html.twig'|file_link(0) }}">templates/pay/index.html.twig</a></code></li>
-    </ul>
+	<div class="input-group mb-3">
+		<div class="input-group-prepend w-25">
+			<span class="input-group-text w-100" id="">消费金额：</span>
+		</div>
+		<input type="text" class="form-control" placeholder="">
+		<div class="input-group-append w-25">
+			<span class="input-group-text w-100" id="">实收：</span>
+		</div>
+	</div>
+	<button type="button" class="btn btn-success btn-lg">确 定</button>
+
 </div>
 {% endblock %}

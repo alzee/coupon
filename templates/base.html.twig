@@ -8,8 +8,26 @@
         {% block stylesheets %}
 				{% endblock %}
     </head>
-    <body>
+    <body class="py-4">
+			<div class="container">
+				
+			<nav class="navbar navbar-light bg-light mb-3" id="nav">
+				<ul class="nav nav-pills">
+					<li class="nav-item">
+						<a class="nav-link active" href="/">消 费</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="agent">推荐人</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="coupon">现金卡</a>
+					</li>
+				</ul>	
+			</nav>
+			
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+				
+			</div>
     </body>
 </html>
